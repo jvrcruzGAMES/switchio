@@ -1,11 +1,9 @@
-# Switchfin
+# Switchio
 
 <img src="scripts/org.player.switchfin.svg" alt="icon" height="128" width="128" align="left">
 
-Switchfin is third-party PC player for Jellyfin that provides a native user interface to browse and play movies and series.
+Switchio is third-party NX player for Stremio that provides a native user interface to browse and play movies and series.
 <br>
-
-[![build](https://github.com/dragonflylee/switchfin/actions/workflows/build.yaml/badge.svg)](https://github.com/dragonflylee/switchfin/actions/workflows/build.yaml) [![download](https://img.shields.io/github/downloads/dragonflylee/switchfin/total?label=Downloads)](https://github.com/dragonflylee/switchfin/releases/latest) [![nightly](https://img.shields.io/badge/nightly-build-green)](https://nightly.link/dragonflylee/switchfin/workflows/build.yaml/dev)
 
 **This project is in its early stages so expect bugs.**
 
@@ -67,7 +65,7 @@ Switchfin is third-party PC player for Jellyfin that provides a native user inte
 ## FAQ
 
 1. Q: Subtitles didn't display?
-   A: Put any ttf file at `/switch/Switchfin/subfont.ttf`
+   A: Put any ttf file at `/switch/Switchio/subfont.ttf`
 2. Q: How to enable external drive on switch?
    A: Edit config file `config.json`
 
@@ -80,40 +78,6 @@ Switchfin is third-party PC player for Jellyfin that provides a native user inte
 ```
 
 ![ums](images/ums.jpg)
-
-3. Q: How to play media files on webdav server?
-   A: Edit config file `config.json`
-
-```json
-{
-  "remotes": [
-    {
-      "name": "local",
-      "url": "file:///switch"
-    },
-    {
-      "name": "xiaoya",
-      "passwd": "guest_Api789",
-      "url": "webdav://192.168.1.5:5678/dav",
-      "user": "guest"
-    },
-    {
-      "name": "rpi",
-      "url": "sftp//pi:raspberry@192.168.1.5/media"
-    },
-    {
-      "name": "rclone",
-      "url": "http://192.168.1.5:8000"
-    }
-  ]
-}
-```
-
-* example for using [rClone](https://rclone.org/downloads/) setup HTTP server
-
-```bash
-rclone serve http --addr :8000 --read-only /media/downloads
-```
 
 ## TODO list
 
@@ -139,14 +103,6 @@ cmake -B build_switch -DPLATFORM_SWITCH=ON
 make -C build_switch Switchfin.nro -j$(nproc)
 # for debug
 nxlink -a <YOUR IP> -p Switchfin/Switchfin.nro -s Switchfin.nro --args -d -v
-```
-
-### Building for MinGW64
-
-```bash
-pacman -S ${MINGW_PACKAGE_PREFIX}-cc ${MINGW_PACKAGE_PREFIX}-ninja ${MINGW_PACKAGE_PREFIX}-cmake
-cmake -B build_mingw -G Ninja -DPLATFORM_DESKTOP=ON
-cmake --build build_mingw
 ```
 
 ## Thanks to
