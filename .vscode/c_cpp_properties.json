@@ -89,7 +89,9 @@
             "includePath": [
                 "${workspaceFolder}/app/include",
                 "${workspaceFolder}/library/**",
-                "/opt/switchfin/include"
+                "${workspaceFolder}/library/borealis/library/include/**",
+                "${workspaceFolder}/library/borealis/library/lib/**",
+                "${workspaceFolder}/library/lunasvg/include/**"
             ],
             "defines": [
                 "BOREALIS_USE_OPENGL",

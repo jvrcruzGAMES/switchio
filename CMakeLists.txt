@@ -49,14 +49,14 @@ message(STATUS "git commit ${GIT_TAG_SHORT} build ${VERSION_BUILD}")
 include(${BOREALIS_LIBRARY}/cmake/toolchain.cmake)
 
 # project info
-project(Switchfin)
+project(Switchio)
 set(VERSION_MAJOR "0")
 set(VERSION_MINOR "7")
 set(VERSION_ALTER "0")
 set(PROJECT_TITLEID "010ff000ffff0003")
-set(PROJECT_AUTHOR "dragonflylee")
-set(PACKAGE_NAME "org.player.switchfin")
-set(VITA_TITLEID "SWITCHFIN")
+set(PROJECT_AUTHOR "jvrcruz")
+set(PACKAGE_NAME "games.jvrcruz.switchio")
+set(VITA_TITLEID "SWITCHIO")
 set(PSN_TITLE_ID "SFIN00000")
 set(VITA_VERSION "00.70")
 set(PROJECT_ICON ${CMAKE_CURRENT_SOURCE_DIR}/resources/icon/icon.jpg)
@@ -66,7 +66,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 if (CUSTOM_RESOURCES_DIR)
     set(BRLS_RESOURCES_DIR ${CUSTOM_RESOURCES_DIR})
 elseif (CMAKE_INSTALL)
-    set(BRLS_RESOURCES_DIR ${CMAKE_INSTALL_PREFIX}/share/switchfin)
+    set(BRLS_RESOURCES_DIR ${CMAKE_INSTALL_PREFIX}/share/switchfio)
 endif ()
 
 # setting src and include
@@ -293,7 +293,7 @@ elseif (PLATFORM_PS4)
     add_pkg(${PROJECT_NAME}
             ${CMAKE_BINARY_DIR}/ps4
             ${PSN_TITLE_ID}
-            "switchfin"
+            "switchio"
             ${VITA_VERSION}
             8388608
     )

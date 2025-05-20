@@ -2,7 +2,6 @@
 
 #include "utils/config.hpp"
 #include "utils/thread.hpp"
-#include "api/analytics.hpp"
 
 #include "view/svg_image.hpp"
 #include "view/custom_button.hpp"
