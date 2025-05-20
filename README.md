@@ -108,6 +108,7 @@ nxlink -a <YOUR IP> -p Switchfin/Switchfin.nro -s Switchfin.nro --args -d -v
 ## Thanks to
 
 - **@xfangfang for [wiliwili](https://github.com/xfangfang/wiliwili)**
+- @dragonflylee for the original [Switchfin](https://github.com/dragonflylee/switchfin)
 - @devkitpro and switchbrew for [libnx](https://github.com/switchbrew/libnx)
 - @natinusala and XITRIX for [borealis](https://github.com/natinusala/borealis)
 - @proconsule for [nxmp](https://github.com/proconsule/nxmp)
